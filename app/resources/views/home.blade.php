@@ -93,8 +93,8 @@
                                     <form id="modal-form" action="{{ route('agendamento') }}" method="post">
                                         {{csrf_field()}}
                                         <input type="hidden" name="id_servico" id="id_servico" />
-                                        <input type="text" name="nome" placeholder="Nome" />
-                                        <input type="text" name="email" placeholder="E-mail" />
+                                        <input type="text" name="nome" placeholder="Nome" value="{{Auth::user()->name}}" />
+                                        <input type="text" name="email" placeholder="E-mail" value="{{Auth::user()->email}}" />
                                         <input type="text" name="telefone" placeholder="Telefone" />
                                         <input type="text" name="endereco" placeholder="Endereço" />
                                         <input type="date" name="data" placeholder="Data" />
