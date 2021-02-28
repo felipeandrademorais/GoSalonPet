@@ -21,6 +21,14 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+     @if(session('mensagem'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{session('mensagem')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+     @endif
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light body-bg">
             <div class="container">

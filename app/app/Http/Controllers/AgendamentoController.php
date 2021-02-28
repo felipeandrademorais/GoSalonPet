@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Agendamento;
+use Exception;
 
 class AgendamentoController extends Controller
 {
@@ -34,9 +35,16 @@ class AgendamentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        Agendamento::create($request->all());
-        return redirect()->route('home');
+    {   
+        $mensagem = 'Agendamento enviado com sucesso!';
+
+        try{
+            Agendamento::create($request->all());
+        }catch(Exception $error){
+            $mensagem = 'Erro ao enviar o agendamento: '.$error;
+        }
+
+        return redirect()->route('home')->with('mensagem', $mensagem);
     }
 
     /**

@@ -3,7 +3,7 @@
 @section('content')
 <div id="servicos-container" >
     <div id="background"><h1 class="display-4  mx-auto">Nossos Serviços</h1></div> 
-    
+
     <div id="tabs-container" >
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
