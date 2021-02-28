@@ -5,12 +5,6 @@
     <div id="background"><h1 class="display-4  mx-auto">Nossos Serviços</h1></div> 
     
     <div id="tabs-container" >
-        <!-- @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif -->
-            
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-pequena-tab" data-toggle="tab" href="#nav-pequena" role="tab" aria-controls="nav-pequena" aria-selected="true">Raças Pequenas</a>
@@ -35,7 +29,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                        <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                        <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -57,7 +51,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                      <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                      <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -79,7 +73,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                        <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                        <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -96,13 +90,15 @@
                                 <h1>AGENDA AGORA!</h1>
                                 <p>Entraremos em contato para confirmar o horário</p>
                                 <div>
-                                    <form id="modal-form">
-                                        <input type="text" placeholder="Nome" />
-                                        <input type="text" placeholder="E-mail" />
-                                        <input type="text" placeholder="Telefone" />
-                                        <input type="text" placeholder="Endereço" />
-                                        <input type="date" placeholder="Data" />
-                                        <select>
+                                    <form id="modal-form" action="{{ route('agendamento') }}" method="post">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="id_servico" id="id_servico" />
+                                        <input type="text" name="nome" placeholder="Nome" />
+                                        <input type="text" name="email" placeholder="E-mail" />
+                                        <input type="text" name="telefone" placeholder="Telefone" />
+                                        <input type="text" name="endereco" placeholder="Endereço" />
+                                        <input type="date" name="data" placeholder="Data" />
+                                        <select name="hora">
                                             <option value="09:00">09:00</option>
                                             <option value="10:00">10:00</option>
                                             <option value="10:00">11:00</option>
@@ -112,7 +108,7 @@
                                             <option value="10:00">16:00</option>
                                             <option value="10:00">17:00</option>
                                         </select>
-                                        <input type="submit" value="Enviar" id="agendamento" />
+                                        <input type="submit" value="Enviar" class="agendamento" />
                                     </form>
                                 </div>
                             </div>

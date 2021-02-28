@@ -49817,6 +49817,7 @@ var app = new Vue({
 window.agendamento = function (id) {
   var modal = document.getElementById('id01');
   modal.style.display = 'block';
+  document.getElementById('id_servico').value = id;
 };
 
 /***/ }),

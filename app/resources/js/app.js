@@ -34,4 +34,7 @@ const app = new Vue({
 window.agendamento = function(id) {
    let modal = document.getElementById('id01');
    modal.style.display='block';
+
+   document.getElementById('id_servico').value = id;
+
 }
