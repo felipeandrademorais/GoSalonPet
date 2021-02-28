@@ -16,6 +16,7 @@ class Racas extends Migration
         Schema::create('racas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('nome');
+            $table->integer('tipo_raca'); // 1 - pequena 2- media 3 - grande 
             $table->timestamps();
         });
     }

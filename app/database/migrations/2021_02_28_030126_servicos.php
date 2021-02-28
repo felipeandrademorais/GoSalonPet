@@ -21,6 +21,7 @@ class Servicos extends Migration
             $table->double('preco');
             $table->integer('tempo');
             $table->string('unidade_tempo');
+            $table->string('url_img');
             $table->timestamps();
 
             $table->foreign('id_raca')->references('id')->on('racas');

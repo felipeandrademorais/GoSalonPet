@@ -18,7 +18,8 @@ class ServicosTableSeeder extends Seeder
             'descricao' => 'Um relaxante banho e um boa tosa',
             'preco' => 15.50,
             'tempo' => 2,
-            'unidade_tempo' => 'Hrs'
+            'unidade_tempo' => 'Hrs',
+            'url_img' => 'img/img_1.jpg'
         ]);
 
         DB::table('servicos')->insert([
@@ -27,7 +28,8 @@ class ServicosTableSeeder extends Seeder
             'descricao' => 'Uma relaxante massagem',
             'preco' => 20,
             'tempo' => 1,
-            'unidade_tempo' => 'Hrs'
+            'unidade_tempo' => 'Hrs',
+            'url_img' => 'img/img_1.jpg'
         ]);
 
         DB::table('servicos')->insert([
@@ -36,7 +38,8 @@ class ServicosTableSeeder extends Seeder
             'descricao' => 'Um relazante banho e um boa tosa',
             'preco' => 30,
             'tempo' => 4,
-            'unidade_tempo' => 'Hrs'
+            'unidade_tempo' => 'Hrs',
+            'url_img' => 'img/img_1.jpg'
         ]);
 
          echo "Registros de serviços criados no sistema";

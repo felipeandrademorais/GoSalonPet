@@ -15,14 +15,17 @@ class RacaTableSeeder extends Seeder
     {
         DB::table('racas')->insert([
             'nome' => 'Yorkshire',
+            'tipo_raca' => 1,
         ]);
 
         DB::table('racas')->insert([
             'nome' => 'Poodle',
+            'tipo_raca' => 2,
         ]);
 
         DB::table('racas')->insert([
             'nome' => 'Dogue Alemão',
+            'tipo_raca' => 3,
         ]);
 
          echo "Registros de raças criados no sistema";
