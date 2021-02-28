@@ -43,7 +43,6 @@ html,body, .container{
 }
 
 #tabs-container {
-    width: 60%;
     min-height: 50vh;
     padding: 20px 0;
 }
@@ -58,7 +57,7 @@ html,body, .container{
 #flex-card {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
 }
 
 #flex-card img {
@@ -68,16 +67,31 @@ html,body, .container{
 }
 
 #flex-card #texto {
-    flex:1;
+    width: 100%;
     align-items: flex-start;
     padding: 0 10px;
 }
 
 #flex-card #tempo-valor {
     align-items: center;
+    width: 180px;
     padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #flex-card #text h4 {
     font-weight: bold;
 } 
+
+#flex-card button {
+    background-color: #36b2b0;
+    width: 260px;
+    height: 26px;
+    color: #fff;
+    text-decoration:none; 
+    text-align: center;
+    padding: 2px 10px;
+    border: none;
+}

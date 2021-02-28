@@ -49814,6 +49814,10 @@ var app = new Vue({
   el: '#app'
 });
 
+window.agendamento = function (id) {
+  alert(id);
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

@@ -35,7 +35,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                        <a href="{{ route('home') }}" >Agende Agora </a>
+                                        <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -57,7 +57,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                        <a href="{{ route('home') }}" >Agende Agora </a>
+                                      <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -79,7 +79,7 @@
                                             <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
                                             <p>R$ {{ $servico->preco }} </p>
                                         </div>
-                                        <a href="{{ route('home') }}" >Agende Agora </a>
+                                        <button id="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
                                     </div>
                                 </li>
                             @endforeach
@@ -87,7 +87,6 @@
                         </div>
                     @endif
                 @endforeach
-            
         </div>
     </div>
 </div>
