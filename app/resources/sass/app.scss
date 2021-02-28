@@ -7,14 +7,3 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-#container {
-    position: relative;
-    color: #fff;
-}
-
-#text {
-    position: absolute;
-    top: 50%;
-    left: 18%;
-    transform: translate(-50%, -50%);   
-}

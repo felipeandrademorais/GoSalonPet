@@ -44,10 +44,10 @@
                             <a class="nav-link" href="{{ route('home') }}">Nossos Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}"><img src="img/icoface.png" alt="icoface" width="18" height="18"/></a>
+                            <a class="nav-link" href="{{ url('/') }}"><img src="img/icoface.png" alt="icoface" width="18" height="18"/></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}"><img src="img/icoinsta.png" alt="icoinsta" width="18" height="18" /></a>
+                            <a class="nav-link" href="{{ url('/') }}"><img src="img/icoinsta.png" alt="icoinsta" width="18" height="18" /></a>
                         </li>                        
                         <!-- Authentication Links -->
                         @guest

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Racas;
-use App\Servicos;
 
 class HomeController extends Controller
 {
@@ -25,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $servicos = Servicos::all();
+        $racas = Racas::all();
        
-        return view('home', compact('servicos', 'servicosRacas'));
+        return view('home', compact('racas'));
     }
 }

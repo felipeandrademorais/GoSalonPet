@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Racas extends Model
 {
-    public function racas()
+    public function servicos()
     {
-        return $this->belongsTo(Servicos::class);
+        return $this->hasMany(Servicos::class, 'id_raca');
     }
 }
