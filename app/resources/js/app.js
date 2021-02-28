@@ -32,5 +32,6 @@ const app = new Vue({
 });
 
 window.agendamento = function(id) {
-    alert(id); 
+   let modal = document.getElementById('id01');
+   modal.style.display='block';
 }

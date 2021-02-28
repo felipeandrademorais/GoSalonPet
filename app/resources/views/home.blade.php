@@ -87,6 +87,38 @@
                         </div>
                     @endif
                 @endforeach
+
+                <div id="id01" class="modal">
+                    <div class="modal-content">     
+                        <div class="container-modal">
+                            <span onclick="document.getElementById('id01').style.display='none'" id="sair" >x</span>
+                            <div id="modal-body">
+                                <h1>AGENDA AGORA!</h1>
+                                <p>Entraremos em contato para confirmar o horário</p>
+                                <div>
+                                    <form id="modal-form">
+                                        <input type="text" placeholder="Nome" />
+                                        <input type="text" placeholder="E-mail" />
+                                        <input type="text" placeholder="Telefone" />
+                                        <input type="text" placeholder="Endereço" />
+                                        <input type="date" placeholder="Data" />
+                                        <select>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:00">11:00</option>
+                                            <option value="10:00">13:00</option>
+                                            <option value="10:00">14:00</option>
+                                            <option value="10:00">15:00</option>
+                                            <option value="10:00">16:00</option>
+                                            <option value="10:00">17:00</option>
+                                        </select>
+                                        <input type="submit" value="Enviar" id="agendamento" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>

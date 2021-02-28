@@ -49815,7 +49815,8 @@ var app = new Vue({
 });
 
 window.agendamento = function (id) {
-  alert(id);
+  var modal = document.getElementById('id01');
+  modal.style.display = 'block';
 };
 
 /***/ }),
