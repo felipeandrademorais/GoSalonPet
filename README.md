@@ -1,65 +1,62 @@
-
-
 # Prova PHP IST-SD
 
-**Plataforma de Agendamento de Serviços**
 
-Bem vindo, você está para iniciar o Processo Seletivo do Instituto SENAI de Tecnologia em Soluções Digitais. Você deverá avaliar a proposta que preparamos abaixo e procure elaborar uma página com todas as características propostas utilizando-se de seus conhecimentos em HTML, CSS e a Linguagem PHP. 
+**Candidato:** Felipe Morais
 
-Alguns pontos em relação ao desenvolvimento:
+Realizado desafio utilizando framework Laravel;
 
-* Fique a vontade para adicionar bibliotecas e ferramentas externas, caso ache necessário.
-* O arquivo de exemplo de conexão com o banco de dados, está no arquivo app/index.php.
-* Organize os arquivos do projeto de uma forma adequada (MVC).
-* IMPORTANTÍSSIMO: **Você deverá atualizar este readme com as instruções de como o avaliador irá rodar a sua aplicação.**
+O login com redes sociais não foi implementado;
 
-Você irá se destacar caso:
-
-* Concluir o teste completamente
-* Tratar possíveis problemas de segurança
-* Utilizar framework Laravel ou Symfony
-* Clean Code
-* Login com redes sociais
-* Criptografia de senha
-* Criar o layout responsivo para mobile
+# Instruções para execução da aplicação
 
 
-Cliente: O PetShop “Meu Doguinho Salon” deseja que seus clientes possam efetuar agendamentos online. Você foi contratado para isso, o design já lhe enviou os mockups das telas.
+**PASSO 1 - INCIANDO CONTAINERS**
 
-![prova-php-ist](imagens/tela_inicial.png)
+A aplicação utiliza os containers disponibilizados no desafio. 
 
-* Registre-se: O cadastro com redes sociais é opcional.
-* Registre-se: A senha no cadastro por e-mail é opcional. 
+Para começar execute o comando abaixo a partir da raiz do projeto.
 
-![prova-php-ist](imagens/login.png)
-![prova-php-ist](imagens/cadastro.png)
+```
+docker-compose up -d
 
-* A tela de “Nossos Serviços” lista informações que estão armazenadas no banco de dados. Considere duas tabelas Raças e outra Serviços, cada raça poderá contar com uma lista diferente de serviços. Não é necessário criar uma área para administração para cadastro dos serviços. Você poderá popular diretamente no banco de dados.
+```
 
-Entidades
-* Atributos Raças: nome
-* Atributos Serviços: id_raca, nome, descricao, preco e tempo
+Será iniciado o container do PHP, Ngnix e Mysql
 
-![prova-php-ist](imagens/nossos_servicos.png)
+**PASSO 2 - EXECUTAR AS MIGRAÇÔES E SEEDS**
 
-* Você não deve permitir o agendamento para usuários não logados
-* Quando o usuário estiver logado e clicar em agendar um serviço os campos de nome e e-mail devem vir preenchidos.
+Acesse a pasta `app` que é a pasta onde contém o projeto desenvolvido e em 
+seguida acesse o container PHP, utilizando o comando abaixo:
 
-![prova-php-ist](imagens/agendamento.png)
+```
+docker exec -it nome_do_container bash
+```
 
-## Configuração do Projeto
+após acessar o container execute as migrações atraves do comando abaixo:
 
-O projeto utiliza docker para criar um ambiente de desenvolvimento necessário, utilizando **PHP** e **MySql**.
+*Obs: o banco utilizado é o `ist`*
 
-Necessário instalar o docker: https://www.docker.com/get-started
+```
+php artisan migrate
+```
 
-O banco de dados `ist` será criado automaticamente via docker, na hora que subir o projeto. Mas cabe a você a estruturação e criação das demais tabelas, conforme apresentação das telas acima. O script SQL de criação das tabelas necessárias para o projeto, deve ser adicionados no arquivo `db/ist.sql`.
+foi disponibilizados dados para popular o banco e poder efetuar os testes.
+Você pode popular esses dados executando os Seeds atraves do comando abaixo:
 
-Após o clone do projeto no GitHub, ir via terminal na pasta extraída e executar o comando do docker: `docker-compose up`.
+```
+php artisan db:seed
+```
 
-**Atenção:** Se atentar que não pode haver nenhum serviço rodando nas portas `80` e `3306` no computador utilizado para a realização da prova, se tiver, será necessário fechar todos os serviços que utilizam essas portas.
+**PASSO 3 - ACESSANDO A APLICAÇÂO**
 
-Para verificar se a aplicação subiu corretamento com o docker, digitar no navegador http://localhost/, deverá mostrar uma tela inicial com **Hello World!**, e um exemplo de uma lista com os dados da tabela `pessoas`.
+Após executar os passos acima a aplicação já pode ser acessada pelo `localhost:80`
+
+Caso não queira se cadastras pode utilizar o login abaixo;
+
+```
+Email: flpiandrade@gmail.com
+Senha 123456
+```
 
 Abaixo os dados para testar a conexão com o banco de dados:
 - host: localhost
@@ -67,6 +64,4 @@ Abaixo os dados para testar a conexão com o banco de dados:
 - database: ist
 - user: root
 - password: 123.456
-
-No mais, desenvolva com qualidade e boa prova! :)
 

@@ -16,68 +16,56 @@
                 @foreach($racas as $raca)
                     @if($raca->tipo_raca == 1)
                         <div class="tab-pane fade show active" id="nav-pequena" role="tabpanel" aria-labelledby="nav-pequena-tab">
-                            <ul class="list-group nav nav-tabs" >
                             @foreach($raca->servicos as $servico)
-                                <li class="nav-item">
-                                    <div id="flex-card" class="list-group-item">
-                                        <img src="{{ $servico->url_img }}" alt="" />
-                                        <div id="texto" >
-                                            <h4>{{ $servico->nome }}</h4>
-                                            <p>{{ $servico->descricao }}</p>
-                                        </div>
-                                        <div id="tempo-valor" >
-                                            <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
-                                            <p>R$ {{ $servico->preco }} </p>
-                                        </div>
-                                        <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                <div id="flex-card" class="list-group-item">
+                                    <img src="{{ $servico->url_img }}" alt="" />
+                                    <div id="texto" >
+                                        <h4>{{ $servico->nome }}</h4>
+                                        <p>{{ $servico->descricao }}</p>
                                     </div>
-                                </li>
+                                    <div id="tempo-valor" >
+                                        <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
+                                        <p>R$ {{ $servico->preco }} </p>
+                                    </div>
+                                    <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                </div>
                             @endforeach
-                            </ul>
                         </div>
                     @endif
                     @if($raca->tipo_raca == 2)
                         <div class="tab-pane fade show active" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab">
-                            <ul class="list-group nav nav-tabs" >
                             @foreach($raca->servicos as $servico)
-                                <li class="nav-item">
-                                    <div id="flex-card" class="list-group-item">
-                                        <img src="{{ $servico->url_img }}" alt="" />
-                                        <div id="texto" >
-                                            <h4>{{ $servico->nome }}</h4>
-                                            <p>{{ $servico->descricao }}</p>
-                                        </div>
-                                        <div id="tempo-valor" >
-                                            <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
-                                            <p>R$ {{ $servico->preco }} </p>
-                                        </div>
-                                      <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                <div id="flex-card" class="list-group-item">
+                                    <img src="{{ $servico->url_img }}" alt="" />
+                                    <div id="texto" >
+                                        <h4>{{ $servico->nome }}</h4>
+                                        <p>{{ $servico->descricao }}</p>
                                     </div>
-                                </li>
+                                    <div id="tempo-valor" >
+                                        <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
+                                        <p>R$ {{ $servico->preco }} </p>
+                                    </div>
+                                    <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                </div>
                             @endforeach
-                            </ul>
                         </div>
                     @endif
                     @if($raca->tipo_raca == 3)
                         <div class="tab-pane fade show active" id="nav-grande" role="tabpanel" aria-labelledby="nav-grande-tab">
-                            <ul class="list-group nav nav-tabs" >
                             @foreach($raca->servicos as $servico)
-                                <li class="nav-item">
-                                    <div id="flex-card" class="list-group-item">
-                                        <img src="{{ $servico->url_img }}" alt="" />
-                                        <div id="texto" >
-                                            <h4>{{ $servico->nome }}</h4>
-                                            <p>{{ $servico->descricao }}</p>
-                                        </div>
-                                        <div id="tempo-valor" >
-                                            <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
-                                            <p>R$ {{ $servico->preco }} </p>
-                                        </div>
-                                        <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                <div id="flex-card" class="list-group-item">
+                                    <img src="{{ $servico->url_img }}" alt="" />
+                                    <div id="texto" >
+                                        <h4>{{ $servico->nome }}</h4>
+                                        <p>{{ $servico->descricao }}</p>
                                     </div>
-                                </li>
+                                    <div id="tempo-valor" >
+                                        <p>{{ $servico->tempo }} {{ $servico->unidade_tempo }}<p>
+                                        <p>R$ {{ $servico->preco }} </p>
+                                    </div>
+                                    <button class="agendamento" onclick="agendamento( '{{ $servico->id }}')">Agende Agora</button>
+                                </div>
                             @endforeach
-                            </ul>
                         </div>
                     @endif
                 @endforeach
