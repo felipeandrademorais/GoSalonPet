@@ -68,8 +68,6 @@ php artisan db:seed
 
 Após executar os passos acima a aplicação já pode ser acessada pelo `localhost:80`
 
-Caso não queira se cadastras pode utilizar o login abaixo;
-
 
 # APLICAÇÃO EM FUNCIONAMENTO
 
